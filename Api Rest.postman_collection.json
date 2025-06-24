@@ -1,0 +1,1050 @@
+{
+	"info": {
+		"_postman_id": "7f5cd7bc-5a94-40e6-93ad-a60b044ab511",
+		"name": "Api Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15903178"
+	},
+	"item": [
+		{
+			"name": "GET - Seleccionar dato especifico",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=id_course",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_course"
+						},
+						{
+							"key": "linkTo",
+							"value": "tittle_course",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Curso de HTML y CSS",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Filtro de un solo valor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=tittle_course,id_course,description_course&linkTo=tittle_course&equalTo=Curso de HTML y CSS",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "tittle_course,id_course,description_course"
+						},
+						{
+							"key": "linkTo",
+							"value": "tittle_course"
+						},
+						{
+							"key": "equalTo",
+							"value": "Curso de HTML y CSS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Filtro varios valores",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=tittle_course,id_course,description_course&linkTo=tittle_course&equalTo=Curso de HTML y CSS",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "tittle_course,id_course,description_course"
+						},
+						{
+							"key": "linkTo",
+							"value": "tittle_course"
+						},
+						{
+							"key": "equalTo",
+							"value": "Curso de HTML y CSS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Ordenar datos sin filtro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=*&orderBy=tittle_course&orderMode=ASC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "tittle_course",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Curso de HTML y CSS",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "tittle_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Ordenar datos con filtros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=*&linkTo=id_instructor_course&equalTo=2&orderBy=tittle_course&orderMode=DESC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "id_instructor_course"
+						},
+						{
+							"key": "equalTo",
+							"value": "2"
+						},
+						{
+							"key": "orderBy",
+							"value": "tittle_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Limitar datos sin filtros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=*&startAt=0&endAt=5&orderBy=id_course&orderMode=DESC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "tittle_course",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Curso de HTML y CSS",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "5"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Limitar datos con filtros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=*&linkTo=id_instructor_course&equalTo=2&orderBy=id_course&orderMode=ASC&startAt=0&endAt=2",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "id_instructor_course"
+						},
+						{
+							"key": "equalTo",
+							"value": "2"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entre tablas sin filtro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?select=name_instructor,tittle_course,id_course&rel=courses,instructors&type=course,instructor&orderBy=id_course&orderMode=ASC&starAt=0&endAt=5",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "name_instructor,tittle_course,id_course"
+						},
+						{
+							"key": "linkTo",
+							"value": "tittle_course",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "Curso de HTML y CSS",
+							"disabled": true
+						},
+						{
+							"key": "rel",
+							"value": "courses,instructors"
+						},
+						{
+							"key": "type",
+							"value": "course,instructor"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_course"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						},
+						{
+							"key": "starAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entre tablas con filtro",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?linkTo=tittle_course&equalTo=Curso de HTML y CSS&select=name_instructor,tittle_course,id_course&rel=courses,instructors&type=course,instructor",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "tittle_course"
+						},
+						{
+							"key": "equalTo",
+							"value": "Curso de HTML y CSS"
+						},
+						{
+							"key": "select",
+							"value": "name_instructor,tittle_course,id_course"
+						},
+						{
+							"key": "rel",
+							"value": "courses,instructors"
+						},
+						{
+							"key": "type",
+							"value": "course,instructor"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_course",
+							"disabled": true
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC",
+							"disabled": true
+						},
+						{
+							"key": "starAt",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "endAt",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda sin relaciones y con filtros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/courses?select=*&linkTo=tittle_course,id_instructor_course&search=php_2",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "tittle_course,id_instructor_course"
+						},
+						{
+							"key": "search",
+							"value": "php_2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda con relaciones y con filtros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?rel=products,categories&type=product,category&search=Cortinas_2&select=name_product,name_category&linkTo=name_product,id_category_prduct",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "products,categories"
+						},
+						{
+							"key": "type",
+							"value": "product,category"
+						},
+						{
+							"key": "search",
+							"value": "Cortinas_2"
+						},
+						{
+							"key": "select",
+							"value": "name_product,name_category"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_product,id_category_prduct"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos con filtros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/products?select=*&between1=2025-05-06&between2=2025-06-06&linkTo=date_created_product&filterTo=id_category_product&inTo=1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "between1",
+							"value": "2025-05-06"
+						},
+						{
+							"key": "between2",
+							"value": "2025-06-06"
+						},
+						{
+							"key": "linkTo",
+							"value": "date_created_product"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_category_product"
+						},
+						{
+							"key": "inTo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos entre relaciones con filtros",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?rel=products,categories&type=product,category&linkTo=date_created_product&between1=2025-05-06&between2=2025-06-06&select=name_product,name_category,date_created_product&filterTo=id_category_product&inTo=1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "products,categories"
+						},
+						{
+							"key": "type",
+							"value": "product,category"
+						},
+						{
+							"key": "linkTo",
+							"value": "date_created_product"
+						},
+						{
+							"key": "between1",
+							"value": "2025-05-06"
+						},
+						{
+							"key": "between2",
+							"value": "2025-06-06"
+						},
+						{
+							"key": "select",
+							"value": "name_product,name_category,date_created_product"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_category_product"
+						},
+						{
+							"key": "inTo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Crear registro en la BD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tittle_course",
+							"value": "Aprende PHP de cero a vanzado",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description_course",
+							"value": "Aprende todas las bases de este maravilloso lenguaje",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "php.jpg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "49.99",
+							"type": "text"
+						},
+						{
+							"key": "date_created_course",
+							"value": "2025-06-22",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/courses?id=52&nameId=id_course&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY&table=instructors&suffix=instructor",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "52"
+						},
+						{
+							"key": "nameId",
+							"value": "id_course"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY"
+						},
+						{
+							"key": "table",
+							"value": "instructors"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Editar registro en la BD",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tittle_course",
+							"value": "Aprende PHP de cero a vanzado",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description_course",
+							"value": "Aprende todas las bases de este maravilloso lenguaje",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "php.jpg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "49.99",
+							"type": "text"
+						},
+						{
+							"key": "date_created_course",
+							"value": "2025-06-22",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/courses?id=52&nameId=id_course&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY&table=instructors&suffix=instructor",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "52"
+						},
+						{
+							"key": "nameId",
+							"value": "id_course"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY"
+						},
+						{
+							"key": "table",
+							"value": "instructors"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE-  Eliminar registro en la BD",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tittle_course",
+							"value": "Aprende PHP de cero a vanzado",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description_course",
+							"value": "Aprende todas las bases de este maravilloso lenguaje",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id_instructor_course",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image_course",
+							"value": "php.jpg",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price_course",
+							"value": "49.99",
+							"type": "text"
+						},
+						{
+							"key": "date_created_course",
+							"value": "2025-06-22",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/courses?id=40&nameId=id_course&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY&table=instructors&suffix=instructor",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "40"
+						},
+						{
+							"key": "nameId",
+							"value": "id_course"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY"
+						},
+						{
+							"key": "table",
+							"value": "instructors"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Crear registro de usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_instructor",
+							"value": "correo@correo.com",
+							"type": "text"
+						},
+						{
+							"key": "password_instructor",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/instructors?register=true&suffix=instructor&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"instructors"
+					],
+					"query": [
+						{
+							"key": "register",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA3MjI0MDYsImV4cCI6MTc1MDgwODgwNiwiZGF0YSI6eyJpZCI6MTEsImVtYWlsIjoiY29ycmVvQGNvcnJlby5jb20ifX0.Kwn7hRLKpFqq7v_Bha2d12JmRA8RRa_L28iBvPPHyoY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Login de usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "sfsagwshsGRgsXFJDF46234SDGSrtery",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_instructor",
+							"value": "correo@correo.com",
+							"type": "text"
+						},
+						{
+							"key": "password_instructor",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/instructors?login=true&suffix=instructor",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"instructors"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "instructor"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
